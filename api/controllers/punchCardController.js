@@ -18,6 +18,16 @@ exports.create_pass_phrase = function(req, res) {
   new_passphrase.save(function(err, passphrase){
     if(err)
       res.send(err);
-    res.json(passphrase);
+    res.json({speech: passphrase.phrase,
+      displayText: passphrase.phrase,
+      spurce: 'heroku app'
+    });
   });
 };
+
+
+// return res.json({
+//     speech: speech,
+//     displayText: speech,
+//     source: 'webhook-echo-sample'
+// });
