@@ -4,7 +4,8 @@
   "description": "handles punch in requests and also generates phrases",
   "version": "1.0.0",
   "engines": {
-    "node": "6.11.1"
+    "node": "6.11.1",
+    "npm": "5.x.x"
   },
   "main": "server.js",
   "scripts": {
