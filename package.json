@@ -2,7 +2,11 @@
   "name": "punchcard_api",
   "version": "1.0.0",
   "description": "handles punch in requests and also generates phrases",
-  "main": "index.js",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -18,7 +22,6 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "nodemon": "^1.11.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongoose": "^4.11.5",
