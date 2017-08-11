@@ -7,7 +7,7 @@ var express = require('express'),
 
   mongoose.Promise = global.Promise;
 
-  var promise = mongoose.connect('mongodb://localhost/digitalLab', {
+  var promise = mongoose.connect('mongodb://heroku_8fk5dmsk:mcmvli65ql2sjvk2g4jn2o370f@ds133328.mlab.com:33328/heroku_8fk5dmsk', {
     useMongoClient: true
   })
 
