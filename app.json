@@ -1,0 +1,8 @@
+{
+  "name": "Nodejs Getting Started",
+  "description": "hosting first heroku nodejs servers using Express",
+  "repository": "https://github.com/stevaaa/punchcard-api",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
