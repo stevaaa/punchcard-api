@@ -11,6 +11,13 @@ var express = require('express'),
     useMongoClient: true
   })
 
+	// mongoose.connect('mongodb://localhost/myapp');
+
+// var promise = mongoose.connect('mongodb://localhost/blitz', {
+//   useMongoClient: true
+// })
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

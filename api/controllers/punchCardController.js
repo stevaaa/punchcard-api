@@ -20,7 +20,7 @@ exports.create_pass_phrase = function(req, res) {
       res.send(err);
     res.json({speech: passphrase.phrase,
       displayText: passphrase.phrase,
-      spurce: 'heroku app'
+      source: 'heroku app'
     });
   });
 };
