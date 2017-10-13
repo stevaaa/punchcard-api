@@ -14,7 +14,9 @@ exports.get_pass_phrase = function(req, res) {
 };
 
 exports.create_pass_phrase = function(req, res) {
-	console.log(req.body.result);
+	console.log("------------------");
+	console.log("request" + req.body);
+	console.log("------------------");
   var new_passphrase = new PassPhrase(req.body);
   new_passphrase.phrase = superb();
   // console.log(new_passphrase);
