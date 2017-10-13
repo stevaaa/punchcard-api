@@ -14,4 +14,13 @@ var PassPhraseSchema = new Schema({
   }
 });
 
+var StoreBoySchema = new Schema({
+	ingredients: {
+		name: String,
+		quantity: Number,
+		unit: String
+	}
+})
+
 module.exports = mongoose.model('PassPhrase', PassPhraseSchema);
+module.exports = mongoose.model('StoreBoy', StoreBoySchema);
