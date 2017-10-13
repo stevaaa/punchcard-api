@@ -15,7 +15,7 @@ exports.get_pass_phrase = function(req, res) {
 
 exports.create_pass_phrase = function(req, res) {
 	console.log("------------------");
-	console.log("request" + req.body);
+	console.log("request" + req.body.get(action));
 	console.log("------------------");
   var new_passphrase = new PassPhrase(req.body);
   new_passphrase.phrase = superb();
@@ -28,7 +28,6 @@ exports.create_pass_phrase = function(req, res) {
       source: 'heroku app'
     });
   });
-	console.log(res);
 };
 
 exports.list_storeboy = function(req, res) {
