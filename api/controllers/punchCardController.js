@@ -32,7 +32,7 @@ exports.get_pass_phrase = function(req, res)
      console.log(result3);
      console.log(result4);
     res.json({
-      "speech": "I have " + result1 + "ed " + result2,
+      "speech": "Cool, I have " + result1 + "ed " + result2 + "result3" + "result4",
       "source": "heroku app",
       "displayText": "",
     });
