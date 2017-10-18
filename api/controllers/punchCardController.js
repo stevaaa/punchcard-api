@@ -16,7 +16,7 @@ exports.get_pass_phrase = function(req, res)
    if (err) {
      throw err;
         }
-      obj = JSON.parse(data);
+    obj = JSON.parse(req.body);
     console.log(obj.result.action);
     obj2 = (obj.result.action);
 
