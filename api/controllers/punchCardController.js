@@ -12,10 +12,11 @@ exports.get_pass_phrase = function(req, res)
   var result3;
   var result4;
   var obj2;
-  fs.readFile('./api/controllers/req.json', 'utf8', function (err, data) {
-   if (err) {
-     throw err;
-        }
+  // fs.readFile('./api/controllers/req.json', 'utf8', function (err, data) {
+  //  if (err) {
+  //    throw err;
+  //       }
+    console.log(req.body);
     obj = JSON.parse(req.body);
     console.log(obj.result.action);
     obj2 = (obj.result.action);
@@ -45,5 +46,5 @@ function doSomething (callback) {
 doSomething (function doSomethingAfter(err, result) {
     // process the async result
 });
-});
+// });
 }
