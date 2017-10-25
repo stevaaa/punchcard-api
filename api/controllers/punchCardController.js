@@ -1,61 +1,50 @@
 'use strict';
 var superb = require('superb');
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+  PassPhrase = mongoose.model('PassPhrase');
 
-var PassPhrase = mongoose.model('PassPhrase');
-var StoreBoy = mongoose.model('StoreBoy');
+var fs = require('fs');
+exports.get_pass_phrase = function(req, res)
+{
+  var obj;
+  var result1;
+  var result2;
+  var result3;
+  var result4;
+  var obj2;
+  // fs.readFile('./api/controllers/req.json', 'utf8', function (err, data) {
+  //  if (err) {
+  //    throw err;
+  //       }
+    console.log(req);
+    obj = JSON.parse(req);
+    console.log(obj.result.action);
+    obj2 = (obj.result.action);
 
-exports.get_pass_phrase = function(req, res) {
-  PassPhrase.find({}, function(err, passphrase){
-    if(err)
-      res.send(err);
-    res.json(passphrase);
-  });
-};
-
-exports.create_pass_phrase = function(req, res) {
-	console.log("------------------");
-	console.log(Object.keys(req.body));
-	console.log(req.body.result);
-	console.log("------------------");
-  var new_passphrase = new PassPhrase(req.body);
-  new_passphrase.phrase = superb();
-  // console.log(new_passphrase);
-  new_passphrase.save(function(err, passphrase){
-    if(err)
-      res.send(err);
-    res.json({speech: passphrase.phrase,
-      displayText: passphrase.phrase,
-      source: 'heroku app'
+      if(obj2 == 'add_item')
+   {
+     console.log(obj.result.parameters.add_ingredients);
+     result1 = obj.result.parameters.add_ingredients;
+     result2 = obj.result.parameters.ingredients;
+     result3 = obj.result.parameters.unit_weight.amount;
+     result4 = obj.result.parameters.unit_weight.unit;
+     console.log(result1);
+     console.log(result2);
+     console.log(result3);
+     console.log(result4);
+    res.json({
+      "speech": "Cool, I have " + result1 + "ed " + result2 + " " + result3 + " " +result4,
+      "source": "heroku app",
+      "displayText": "",
     });
-  });
-};
 
-exports.list_storeboy = function(req, res) {
-	StoreBoy.find({}, function(err, storeboy){
-		console.log(storeboy);
-		if(err)
-			res.send(err);
-		res.json(storeboy);
-	});
-};
+}
+function doSomething (callback) {
+    // any async callback invokes callback with response
+}
 
-exports.add_storeboy = function(req, res) {
-  var new_storeboy = new StoreBoy(req.body);
-  new_storeboy.name = superb();
-  // console.log(new_passphrase);
-  new_storeboy.save(function(err, storeboy){
-    if(err)
-      res.send(err);
-    res.json({name: storeboy.name,
-      quantity: storeboy.name,
-      source: 'heroku app'
-    });
-  });
-};
-
-// return res.json({
-//     speech: speech,
-//     displayText: speech,
-//     source: 'webhook-echo-sample'
+doSomething (function doSomethingAfter(err, result) {
+    // process the async result
+});
 // });
+}

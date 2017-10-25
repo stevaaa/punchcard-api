@@ -1,0 +1,45 @@
+{
+  "id": "399794a8-525b-4f99-b5e0-7fb43bc2ec75",
+  "timestamp": "2017-10-18T14:14:08.351Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "add sugar 20 kg",
+    "action": "add_item",
+    "actionIncomplete": false,
+    "parameters": {
+      "add_ingredients": "add",
+      "ingredients": "sugar",
+      "unit_weight": {
+        "amount": 20,
+        "unit": "kg"
+      }
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "e2cf73b6-af40-4735-a566-d8016a168390",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "webhookResponseTime": 7394,
+      "intentName": "add_items"
+    },
+    "fulfillment": {
+      "speech": "rad",
+      "source": "heroku app",
+      "displayText": "rad",
+      "messages": [
+        {
+          "type": 0,
+          "id": "c1408b7b-8eb6-412b-b5ea-5697588d614b",
+          "speech": "rad"
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "bf245931-6255-4115-81e0-dfe777597b69"
+}
